@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Headphones {
-  id                String  @id @default(cuid())
+  id                String   @id @default(cuid())
   reference         String
   brand             String
   model             String
@@ -20,4 +20,5 @@ model Headphones {
   installment_price Decimal
   installments      Decimal
   img_url           String
+  createdAt         DateTime @default(now())
 }
